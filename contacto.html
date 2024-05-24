@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Cosméticos y Cuidado de la Piel</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./Imagenes/flor.png" type="image-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Productos Cosméticos y Cuidado de la Piel</h1>
+        <nav>
+            <ul>
+                <li><a href="./Index.html">Inicio</a></li>
+                <li><a href="./Productos.html">Productos</a></li>
+                <li><a href="./Nosotros.html">Acerca de Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <span class="error" id="errorNombre">Este campo es obligatorio.</span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="errorEmail">Este campo es obligatorio.</span>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <span class="error" id="errorTelefono">Este campo es obligatorio.</span>
+
+            <label for="producto">Producto de interés: ¡te enviaremos más info!</label>
+            <select id="producto" name="producto" required>
+                <option value="">Seleccione un producto</option>
+                <option value="producto1">Crema hidratante</option>
+                <option value="producto2">Aceite limpiador</option>
+                <option value="producto3">Limpiador en gel</option>
+                <option value="producto4">Crema para ojeras</option>
+                <option value="producto5">Sérum</option>
+                <option value="producto6">Protector solar</option>
+            </select>
+            <span class="error" id="errorProducto">Este campo es obligatorio.</span>
+
+            <fieldset>
+                <legend>Género:</legend>
+                <div class="form-group-inline">
+                    <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+                    <label><input type="radio" name="genero" value="femenino" required> Femenino</label>
+                    <span class="error" id="errorGenero">Este campo es obligatorio.</span>
+                </div>
+            </fieldset>
+
+            <div class="form-group-inline">
+                <label><input type="checkbox" name="suscripcion" value="si"> Quiero suscribirme</label>
+            </div>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <span class="error" id="errorMensaje">Este campo es obligatorio.</span>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <script src="/script.js"></script>
+</body>
+</html>
