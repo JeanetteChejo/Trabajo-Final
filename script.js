@@ -77,6 +77,18 @@ document.addEventListener("DOMContentLoaded", function() {
         // Prevenir el envío del formulario si alguna validación falla
         if (!isValid) {
             event.preventDefault();
+        } else {
+            // Mostrar mensaje de confirmación
+            const confirmationMessage = document.createElement("p");
+            confirmationMessage.textContent = "Formulario enviado con éxito.";
+            confirmationMessage.style.color = "green";
+            form.appendChild(confirmationMessage);
+
+            // Restablecer el formulario después de mostrar el mensaje de confirmación
+            setTimeout(() => {
+                form.reset();
+                form.removeChild(confirmationMessage);
+            }, 5000); // El mensaje se eliminará después de 5 segundos
         }
     });
 });
